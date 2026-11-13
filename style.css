@@ -1,0 +1,421 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f5ef;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+
+header {
+    background: #173b32;
+    color: #ffffff;
+    padding: 22px 0;
+    border-bottom: 3px solid #c9a96e;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#branding a {
+    text-decoration: none;
+    color: white;
+}
+
+#branding h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.highlight {
+    color: #c9a96e;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav .current a {
+    color: #c9a96e;
+}
+
+
+/* =========================
+   HERO / SHOWCASE
+========================= */
+
+#showcase {
+    min-height: 600px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+}
+
+.showcase-overlay {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.showcase-content {
+    color: white;
+    max-width: 750px;
+}
+
+.welcome-text {
+    color: #d4b67a;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.showcase-content h1 {
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    font-family: Georgia, serif;
+}
+
+.showcase-description {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    background: #c9a96e;
+    color: #173b32;
+    padding: 13px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    background: #ffffff;
+    color: #173b32;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+#about {
+    padding: 100px 0;
+    background: #f8f5ef;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+}
+
+.section-text {
+    max-width: 750px;
+    text-align: center;
+}
+
+.section-label {
+    color: #a8844b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-text h2,
+.section-heading h2,
+.contact-content h2 {
+    font-family: Georgia, serif;
+    color: #173b32;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.section-text p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.text-link {
+    color: #a8844b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   ROOMS SECTION
+========================= */
+
+#rooms {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading > p:last-child {
+    color: #666;
+    font-size: 17px;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.room-card {
+    background: #f8f5ef;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+}
+
+.room-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.room-one {
+    background-image:
+        url("https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=900&q=80");
+}
+
+.room-two {
+    background-image:
+        url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80");
+}
+
+.room-three {
+    background-image:
+        url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80");
+}
+
+.room-info {
+    padding: 25px;
+}
+
+.room-info h3 {
+    font-family: Georgia, serif;
+    color: #173b32;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.room-info p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.room-info a {
+    color: #a8844b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.room-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+#contact {
+    background: #173b32;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+}
+
+.contact-content .section-label {
+    color: #d4b67a;
+}
+
+.contact-content h2 {
+    color: #ffffff;
+}
+
+.contact-content > p:not(.section-label) {
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #102820;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 0;
+}
+
+footer h3 {
+    font-family: Georgia, serif;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #cccccc;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 15px;
+    color: #888888;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 18px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .showcase-content h1 {
+        font-size: 40px;
+    }
+
+    .showcase-description {
+        font-size: 16px;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-text h2,
+    .section-heading h2,
+    .contact-content h2 {
+        font-size: 32px;
+    }
+
+    .btn {
+        margin-bottom: 12px;
+    }
+
+    #showcase,
+    .showcase-overlay {
+        min-height: 550px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 90%;
+    }
+
+    #branding h1 {
+        font-size: 19px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .showcase-content h1 {
+        font-size: 34px;
+    }
+
+    .welcome-text {
+        letter-spacing: 2px;
+    }
+
+}
